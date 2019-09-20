@@ -1,2 +1,6 @@
-<h1>Quotes</h1>
-<p>Some of the quotes are {{ quote }}</p>
+<h1>Life Quotes</h1>
+<hr>
+<h3>Some of the quotes are</h3>
+<ul>
+    <li *ngFor='let quote of quotes'>{{quote.id}}. {{quote.name}}</li>
+</ul>
