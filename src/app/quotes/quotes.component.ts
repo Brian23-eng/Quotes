@@ -16,19 +16,23 @@ export class QuotesComponent implements OnInit {
       {id:1,
        name:'Life is what happens when you are busy making other plans',
       description:'John Kennish',
-    submittedBy:'Brian Omondi'},
+    submittedBy:'Brian Omondi',
+  upVotes:0},
       {id:2,
        name:'Be happy for this moment. This Moment is your life',
        description:'Unknown',
-       submittedBy:'Crazy Mind'},
+       submittedBy:'Crazy Mind',
+       upVotes:0},
       {id:3,
        name:'I think being in love with life is a key to eternal youth',
        description:'Peter Gonzales',
-       submittedBy:'Jibril'},
+       submittedBy:'Jibril',
+       upVotes:0},
       {id:4,
          name:'My mission in life is not merely to survive, but to thrive; and to do so with some passion,some compassion, some humor and some style',
        description:'Jane Martins',
-       submittedBy:'Bontex'}
+       submittedBy:'Bontex',
+       upVotes:0}
     ]
   }
 

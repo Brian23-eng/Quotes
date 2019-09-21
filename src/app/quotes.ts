@@ -3,5 +3,6 @@ export class Quotes {
     name: string;
     description: string;
     submittedBy: string;
+    upVotes: number;
     
 }
