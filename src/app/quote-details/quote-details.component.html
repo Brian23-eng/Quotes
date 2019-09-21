@@ -1,4 +1,4 @@
 <p>
     Total Up Votes: {{quote.upVotes }}</p>
-<p>Created by: {{ quote.submittedBy }} on {{ quote.Date | date}}</p>
+<p>Created by: {{ quote.submittedBy }} on {{ quote.Date | date | uppercase}}</p>
 <button (click)='quoteDelete'>Delete</button>
