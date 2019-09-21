@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule
