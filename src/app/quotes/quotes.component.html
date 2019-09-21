@@ -2,6 +2,10 @@
 <hr>
 <h3>Your quotes</h3>
 <ul>
-    <li *ngFor='let quote of quotes'>{{quote.id}}. {{quote.name}}
+    <li *ngFor='let quote of quotes'>
+        <p> {{quote.id}}. {{quote.name}}.</p>
+
+        --{{ quote.description}}
+
     </li>
 </ul>
