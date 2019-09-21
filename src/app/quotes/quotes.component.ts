@@ -9,7 +9,18 @@ import { Quotes} from '../quotes'
 })
 export class QuotesComponent implements OnInit {
 
-  quotes:Quotes []
+  
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
+  completeQuote(isDelete, index){
+    if (isDelete){
+      this.quotes.splice(index,1)
+    }
+  }
+
+  quotes:Quotes [];
 
   constructor() { 
    this.quotes = [
