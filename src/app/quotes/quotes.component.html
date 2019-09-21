@@ -3,14 +3,14 @@
     <hr>
     <h3>Your quotes</h3>
     <ul>
-        <li class="card card-body" *ngFor='let quote of quotes'>
-            <p> {{quote.id}}. {{quote.name}}.</p>
+        <div class="card card-body" *ngFor='let quote of quotes'>
+            <p> {{quote.name}}.</p>
+            <p>--{{ quote.description}}</p>
+            <button (click)='toggleDetails(i)'>Toggle Details</button>
+            <app-quote-details *ngIf='quote.showDescription' [quote]='quote'></app-quote-details>
 
-            --{{ quote.description}}
-            <app-quote-details [quote]='quote'></app-quote-details>
 
-
-        </li>
+        </div>
     </ul>
 
 </div>
