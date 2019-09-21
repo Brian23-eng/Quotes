@@ -7,11 +7,16 @@
             <p> {{quote.name}}.</p>
             <p>--{{ quote.description}}</p>
 
+
+            <div class="del">
+                <app-quote-details *ngIf="show" [quote]='quote' (isDelete)='completeQuote($event,i)'></app-quote-details>
+            </div>
+
             <div>
                 <button (click)="toggle()" id="btn">{{ details }}</button>
             </div>
 
-            <app-quote-details *ngIf="show" [quote]='quote' (isDelete)='completeQuote($event,i)'></app-quote-details>
+
 
 
         </div>
