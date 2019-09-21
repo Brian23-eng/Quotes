@@ -1,5 +1,7 @@
 export class Quotes {
     id: number;
     name: string;
-    description: string
+    description: string;
+    submittedBy: string;
+    
 }
