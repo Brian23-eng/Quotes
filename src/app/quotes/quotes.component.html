@@ -1,11 +1,13 @@
-<h1>Life Quotes</h1>
-<hr>
-<h3>Your quotes</h3>
-<ul>
-    <li *ngFor='let quote of quotes'>
-        <p> {{quote.id}}. {{quote.name}}.</p>
+<div class="container">
+    <h1>Life Quotes</h1>
+    <hr>
+    <h3>Your quotes</h3>
+    <ul>
+        <li class="card card-body" *ngFor='let quote of quotes'>
+            <p> {{quote.id}}. {{quote.name}}.</p>
 
-        --{{ quote.description}}
+            --{{ quote.description}}
 
-    </li>
-</ul>
+        </li>
+    </ul>
+</div>

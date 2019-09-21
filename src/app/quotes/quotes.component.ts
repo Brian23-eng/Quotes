@@ -24,7 +24,7 @@ export class QuotesComponent implements OnInit {
        description:'Peter Gonzales'},
       {id:4,
          name:'My mission in life is not merely to survive, but to thrive; and to do so with some passion,some compassion, some humor and some style',
-       description:''}
+       description:'Jane Martins'}
     ]
   }
 
