@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
-import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 
 
@@ -11,7 +10,6 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
   declarations: [
     AppComponent,
     QuotesComponent,
-    GoalDetailsComponent,
     QuoteDetailsComponent
   ],
   imports: [
