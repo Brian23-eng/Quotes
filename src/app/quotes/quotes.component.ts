@@ -9,10 +9,8 @@ import { Quotes} from '../quotes'
 })
 export class QuotesComponent implements OnInit {
 
-  
-  toggleDetails(index){
-    this.quotes[index].showDescription = !this.quotes[index].showDescription;
-  }
+  public show:boolean = false;
+  public details: any = 'Show';
 
   completeQuote(isDelete, index){
     if (isDelete){
@@ -27,23 +25,32 @@ export class QuotesComponent implements OnInit {
       new Quotes(1,
        'Life is what happens when you are busy making other plans',
       'John Kennish',
-       'Brian Omondi',0),
+       'Brian Omondi',0, new Date(2019,9,21)),
      new Quotes (2,
        'Be happy for this moment. This Moment is your life',
        'Unknown',
-       'Crazy Mind',0),
+       'Crazy Mind',0, new Date(2019,9,21)),
 new Quotes(3,
        'I think being in love with life is a key to eternal youth',
        'Peter Gonzales',
-       'Jibril',0),
+       'Jibril',0, new Date(2019,9,21)),
      new Quotes (4,
          'My mission in life is not merely to survive, but to thrive; and to do so with some passion,some compassion, some humor and some style',
        'Jane Martins',
-       'Bontex',0)
+       'Bontex',0, new Date(2019,9,21))
     ]
   }
 
   ngOnInit() {
+  }
+
+  toggle(){
+    this.show = !this.show;
+
+    if(this.show)
+    this.details = "Hide details";
+    else
+    this.details = "Show details"
   }
 
 }

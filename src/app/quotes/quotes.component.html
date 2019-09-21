@@ -7,9 +7,11 @@
             <p> {{quote.name}}.</p>
             <p>--{{ quote.description}}</p>
 
-            <button class="btn btn-outline-primary btn-sm" (click)='toggleDetails(i)'>Show</button>
+            <div>
+                <button (click)="toggle()" id="btn">{{ details }}</button>
+            </div>
 
-            <app-quote-details *ngIf='quote.showDescription' [quote]='quote' (isDelete)='completeQuote($event,i)'></app-quote-details>
+            <app-quote-details *ngIf="show" [quote]='quote' (isDelete)='completeQuote($event,i)'></app-quote-details>
 
 
         </div>
