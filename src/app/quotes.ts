@@ -6,7 +6,7 @@ export class Quotes {
         public description: string,
         public submittedBy: string,
         public upVotes: number,
-        Date:Date){
+        public Date:Date){
             this.showDescription = false;
         }
     
