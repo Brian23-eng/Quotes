@@ -14,7 +14,7 @@ export class QuotesComponent implements OnInit {
 
   deleteQuote(isComplete, index){
     if (isComplete){
-      let toDelete = confirm(`Are you sure you want to delete ${ this.quotes[index] }?`)
+      let toDelete = confirm(`Are you sure you want to delete the  Quote?`)
 
       if(toDelete){
         this.quotes.splice(index,1)
@@ -31,7 +31,7 @@ export class QuotesComponent implements OnInit {
       new Quotes(1,
        'Life is what happens when you are busy making other plans',
       'John Kennish',
-       'Brian Omondi',0, new Date(2019,9,3)),
+       'Brian Omondi',0, new Date(2019,9,3), ),
      new Quotes (2,
        'Be happy for this moment. This Moment is your life',
        'Unknown',

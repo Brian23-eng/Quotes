@@ -8,7 +8,9 @@ export class Quotes {
         public upVotes: number,
         public Date:Date){
             this.showDescription = false;
+            
         }
     
-    
+ 
 }
+ 
