@@ -59,34 +59,15 @@ new Quotes(3,
   // //   this.quotes.push(quote)
   // }
 
-  upVoter(index) {
-    let i: number;
-    i = this.quotes[index].upVote;
-    i++;
-    this.quotes[index].upVote = i;
-    console.log('this i: ' + i);
-  }
-
-  dnVoter(index) {
-    let j: number;
-    j = this.quotes[index].dnVote;
-    j++;
-    this.quotes[index].dnVote = j;
-  }
-
-  highest(arr) {
-    arr = [];
-    this.quotes.forEach(quote => {
-      arr.push(quote.upVote);
-    });
-    const high = Math.max.apply(Math, arr);
-    return high;
-  }
+  
 
   addNewQuote(quote){
-this.quotes.unshift(quote);
-console.log(this.quotes);
-  }
+let quoteLength = this.quotes.length;
+quote.id = quoteLength+1;
+quote.completeDate = new Date(quote.completeDate)
+  this.quotes.push(quote)
+}
+
   
 
   constructor() { 
