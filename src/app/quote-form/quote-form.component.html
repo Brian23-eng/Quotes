@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <h2 class="text-center">Create Your Own Quotes</h2>
-    <form action="">
+    <form #quoteForm='ngForm'>
         <div class="form-group">
             <label for="quo">Quote</label>
             <textarea class="form-control" name="quo" id="quo" rows="4" required></textarea>
@@ -13,7 +13,7 @@
 
         <div class="form-group">
             <label for="author">Created by </label>
-            <input type="text" name="name" id="name" class="form-control" required>
+            <input type="text" name="name" id="name" class="form-control" required [(ngModel)]="newQuote.name"> Display : {{ newQuote.name }}
 
         </div>
 
