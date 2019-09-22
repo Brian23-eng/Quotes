@@ -27,3 +27,8 @@ h2 {
 .all {
     background-color: #1C2833;
 }
+
+h2 {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
