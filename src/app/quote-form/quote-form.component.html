@@ -3,24 +3,24 @@
     <form #quoteForm='ngForm'>
         <div class="form-group">
             <label for="quo">Quote</label>
-            <textarea class="form-control" name="quo" id="quo" rows="4" required [(ngModel)]="newQuote.quo"></textarea>
+            <textarea class="form-control" name="quo" id="quo" rows="4" required #quo='ngModel' [(ngModel)]="newQuote.quo"></textarea>
 
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <div [hidden]="quo.valid || quo.pristine" class="alert alert-danger">
                 <p>Quote is required</p>
             </div>
         </div>
         <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" name="author" id="author" class="form-control" required [(ngModel)]="newQuote.author">
+            <input type="text" name="author" id="author" class="form-control" required #author="ngModel" [(ngModel)]="newQuote.author">
 
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                 <p>Author is required</p>
             </div>
         </div>
 
         <div class="form-group">
             <label for="author">Created by </label>
-            <input type="text" name="name" id="name" class="form-control" required [(ngModel)]="newQuote.name">
+            <input type="text" name="name" id="name" class="form-control" required #name='ngModel' [(ngModel)]="newQuote.name">
 
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                 <p>Name is required</p>
@@ -30,9 +30,9 @@
 
         <div class="form-group">
             <label for="complete">Date</label>
-            <input type="date" name="date" id="name" class="form-control" required [(ngModel)]="newQuote.date">
+            <input type="date" name="date" id="date" class="form-control" required #date='ngModel' [(ngModel)]="newQuote.date">
 
-            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
                 <p>Date is required</p>
             </div>
         </div>
