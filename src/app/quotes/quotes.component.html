@@ -2,24 +2,29 @@
     <h1>Life Quotes</h1>
     <hr class="styl">
 
-    <h3>Your quotes</h3>
-    <ul>
-        <div class="card card-body" *ngFor='let quote of quotes'>
-            <p> {{quote.name}}.</p>
-            <p>--{{ quote.description}}</p>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Your quotes</h2>
+            <ul>
+                <div class="card card-body" *ngFor='let quote of quotes'>
+                    <p> {{quote.name}}.</p>
+                    <p>--{{ quote.description}}</p>
 
 
-            <div class="del">
-                <app-quote-details *ngIf="show" [quote]='quote' (isDelete)='completeQuote($event,i)'></app-quote-details>
-            </div>
+                    <div class="del">
+                        <app-quote-details *ngIf="show" [quote]='quote' (isDelete)='completeQuote($event,i)'></app-quote-details>
+                    </div>
 
-            <div>
-                <button (click)="toggle()" id="btn">{{ details }}</button>
-            </div>
+                    <div>
+                        <button (click)="toggle()" id="btn">{{ details }}</button>
+                    </div>
+                </div>
+            </ul>
+        </div>
 
-
-
+        <div class="col-md-6">
+            <app-quote-form></app-quote-form>
 
         </div>
-    </ul>
+    </div>
 </div>
