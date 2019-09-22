@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Quotes} from '../quotes'
+import { QuoteFormComponent } from '../quote-form/quote-form.component';
 
 
 @Component({
@@ -8,6 +9,11 @@ import { Quotes} from '../quotes'
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+
+@Input() name : QuoteFormComponent;
+@Input() description: any;
+@Input() submittedBy : any;
+id = 7;
 
   public show:boolean = false;
   public details: any = 'Show';
@@ -28,19 +34,19 @@ export class QuotesComponent implements OnInit {
     new Quotes(1,
      'Life is what happens when you are busy making other plans',
     'John Kennish',
-     'Brian Omondi',0, new Date(2019,9,3), ),
+     'Brian Omondi',0, 0, new Date(2019,9,3), ),
    new Quotes (2,
      'Be happy for this moment. This Moment is your life',
      'Unknown',
-     'Crazy Mind',0, new Date(2019,9,21)),
+     'Crazy Mind',0, 0, new Date(2019,9,21)),
 new Quotes(3,
      'I think being in love with life is a key to eternal youth',
      'Peter Gonzales',
-     'Jibril',0, new Date(2019,9,21)),
+     'Jibril',0, 0, new Date(2019,9,21)),
    new Quotes (4,
        'My mission in life is not merely to survive, but to thrive; and to do so with some passion,some compassion, some humor and some style',
      'Jane Martins',
-     'Bontex',0, new Date(2019,9,21))
+     'Bontex',0, 0, new Date(2019,9,21))
   ]
 
   // addNewQuote(quote){
@@ -53,10 +59,35 @@ new Quotes(3,
   // //   this.quotes.push(quote)
   // }
 
+  upVoter(index) {
+    let i: number;
+    i = this.quotes[index].upVote;
+    i++;
+    this.quotes[index].upVote = i;
+    console.log('this i: ' + i);
+  }
+
+  dnVoter(index) {
+    let j: number;
+    j = this.quotes[index].dnVote;
+    j++;
+    this.quotes[index].dnVote = j;
+  }
+
+  highest(arr) {
+    arr = [];
+    this.quotes.forEach(quote => {
+      arr.push(quote.upVote);
+    });
+    const high = Math.max.apply(Math, arr);
+    return high;
+  }
+
   addNewQuote(quote){
 this.quotes.unshift(quote);
 console.log(this.quotes);
   }
+  
 
   constructor() { 
 
@@ -69,7 +100,7 @@ console.log(this.quotes);
     this.show = !this.show;
 
     if(this.show)
-    this.details = "Hide details";
+    this.details= "Hide details";
     else
     this.details = "Show details"
   }
