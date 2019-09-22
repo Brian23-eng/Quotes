@@ -11,10 +11,18 @@
 }
 
 h1,
-h3 {
+h2 {
     text-align: center;
+    color: white
 }
 
 .card-body {
     margin-bottom: 20px;
+    background-color: #1C2833;
+    color: white;
+    box-shadow: 0 0 7px #922B21;
+}
+
+.all {
+    background-color: #1C2833;
 }
