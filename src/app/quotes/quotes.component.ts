@@ -24,27 +24,42 @@ export class QuotesComponent implements OnInit {
   }
 
 
-  quotes:Quotes [];
+  quotes:Quotes [] =[
+    new Quotes(1,
+     'Life is what happens when you are busy making other plans',
+    'John Kennish',
+     'Brian Omondi',0, new Date(2019,9,3), ),
+   new Quotes (2,
+     'Be happy for this moment. This Moment is your life',
+     'Unknown',
+     'Crazy Mind',0, new Date(2019,9,21)),
+new Quotes(3,
+     'I think being in love with life is a key to eternal youth',
+     'Peter Gonzales',
+     'Jibril',0, new Date(2019,9,21)),
+   new Quotes (4,
+       'My mission in life is not merely to survive, but to thrive; and to do so with some passion,some compassion, some humor and some style',
+     'Jane Martins',
+     'Bontex',0, new Date(2019,9,21))
+  ]
+
+  // addNewQuote(quote){
+  //   let quoteLength = this.quotes.length;
+  //   quote.id = quoteLength+1
+  //   quote.name = quote
+  //   quote.description = quote
+  //   quote.submittedBy = quote
+  //   quote.completeDate = new Date(quote.completeDate)
+  // //   this.quotes.push(quote)
+  // }
+
+  addNewQuote(quote){
+this.quotes.unshift(quote);
+console.log(this.quotes);
+  }
 
   constructor() { 
-   this.quotes = [
-      new Quotes(1,
-       'Life is what happens when you are busy making other plans',
-      'John Kennish',
-       'Brian Omondi',0, new Date(2019,9,3), ),
-     new Quotes (2,
-       'Be happy for this moment. This Moment is your life',
-       'Unknown',
-       'Crazy Mind',0, new Date(2019,9,21)),
-new Quotes(3,
-       'I think being in love with life is a key to eternal youth',
-       'Peter Gonzales',
-       'Jibril',0, new Date(2019,9,21)),
-     new Quotes (4,
-         'My mission in life is not merely to survive, but to thrive; and to do so with some passion,some compassion, some humor and some style',
-       'Jane Martins',
-       'Bontex',0, new Date(2019,9,21))
-    ]
+
   }
 
   ngOnInit() {
