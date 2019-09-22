@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <h2 class="text-center">Create Your Own Quotes</h2>
-    <form #quoteForm='ngForm'>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
             <label for="quo">Quote</label>
             <textarea class="form-control" name="quo" id="quo" rows="4" required #quo='ngModel' [(ngModel)]="newQuote.quo"></textarea>

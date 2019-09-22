@@ -12,11 +12,17 @@ export class QuotesComponent implements OnInit {
   public show:boolean = false;
   public details: any = 'Show';
 
-  completeQuote(isDelete, index){
-    if (isDelete){
-      this.quotes.splice(index,1)
+  deleteQuote(isComplete, index){
+    if (isComplete){
+      let toDelete = confirm(`Are you sure you want to delete ${ this.quotes[index] }?`)
+
+      if(toDelete){
+        this.quotes.splice(index,1)
+      }
+     
     }
   }
+
 
   quotes:Quotes [];
 
@@ -29,11 +35,11 @@ export class QuotesComponent implements OnInit {
      new Quotes (2,
        'Be happy for this moment. This Moment is your life',
        'Unknown',
-       'Crazy Mind',0, new Date(2019,9,12)),
+       'Crazy Mind',0, new Date(2019,9,21)),
 new Quotes(3,
        'I think being in love with life is a key to eternal youth',
        'Peter Gonzales',
-       'Jibril',0, new Date(2019,9,15)),
+       'Jibril',0, new Date(2019,9,21)),
      new Quotes (4,
          'My mission in life is not merely to survive, but to thrive; and to do so with some passion,some compassion, some humor and some style',
        'Jane Martins',
