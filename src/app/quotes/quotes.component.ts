@@ -56,14 +56,14 @@ new Quotes(3,
   //   quote.description = quote
   //   quote.submittedBy = quote
   //   quote.completeDate = new Date(quote.completeDate)
-  // //   this.quotes.push(quote)
+  //   this.quotes.push(quote)
   // }
 
   
 
   addNewQuote(quote){
 let quoteLength = this.quotes.length;
-quote.id = quoteLength+1;
+quote.description = quoteLength+1;
 quote.completeDate = new Date(quote.completeDate)
   this.quotes.push(quote)
 }
