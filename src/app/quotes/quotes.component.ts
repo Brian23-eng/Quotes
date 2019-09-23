@@ -62,7 +62,11 @@ new Quotes(3,
 
   addNewQuote(newQuote){
 let quoteLength = this.quotes.length;
-newQuote.description = quoteLength+1;
+newQuote.id = quoteLength+1;
+newQuote.name = newQuote.name;
+newQuote.decription = newQuote.description;
+newQuote.submittedBy = newQuote.submittedBy;
+
 newQuote.completeDate = new Date(newQuote.completeDate)
   this.quotes.push(newQuote)
 }
