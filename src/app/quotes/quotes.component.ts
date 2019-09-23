@@ -11,8 +11,8 @@ import { QuoteFormComponent } from '../quote-form/quote-form.component';
 export class QuotesComponent implements OnInit {
 
 @Input() name : QuoteFormComponent;
-@Input() description: any;
-@Input() submittedBy : any;
+// @Input() description: any;
+// @Input() submittedBy : any;
 
 
   quotes:Quotes [] =[
@@ -48,24 +48,24 @@ new Quotes(3,
     }
   }
 
-  addNewQuote(quote){
-    let quoteLength = this.quotes.length;
-    quote.id = quoteLength+1
-    quote.name = quote
-    quote.description = quote
-    quote.submittedBy = quote
-    quote.completeDate = new Date(quote.completeDate)
-    this.quotes.push(quote)
-  }
+  // addNewQuote(newQuote){
+  //   let quoteLength = this.quotes.length;
+  //   newQuote.id = quoteLength+1
+  //   newQuote.name = newQuote
+  //   newQuote.description =newQuote
+  //   newQuote.submittedBy = newQuote
+  //   newQuote.completeDate = new Date(newQuote.completeDate)
+  //   this.quotes.push(newQuote)
+  // }
 
   
 
-//   addNewQuote(quote){
-// let quoteLength = this.quotes.length;
-// quote.description = quoteLength+1;
-// quote.completeDate = new Date(quote.completeDate)
-//   this.quotes.push(quote)
-// }
+  addNewQuote(newQuote){
+let quoteLength = this.quotes.length;
+newQuote.description = quoteLength+1;
+newQuote.completeDate = new Date(newQuote.completeDate)
+  this.quotes.push(newQuote)
+}
 
   
 
