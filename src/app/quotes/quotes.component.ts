@@ -13,21 +13,6 @@ export class QuotesComponent implements OnInit {
 @Input() name : QuoteFormComponent;
 @Input() description: any;
 @Input() submittedBy : any;
-id = 7;
-
-  public show:boolean = false;
-  public details: any = 'Show';
-
-  deleteQuote(isComplete, index){
-    if (isComplete){
-      let toDelete = confirm(`Are you sure you want to delete the  Quote?`)
-
-      if(toDelete){
-        this.quotes.splice(index,1)
-      }
-     
-    }
-  }
 
 
   quotes:Quotes [] =[
@@ -49,24 +34,38 @@ new Quotes(3,
      'Bontex', new Date(2019,9,21))
   ]
 
-  // addNewQuote(quote){
-  //   let quoteLength = this.quotes.length;
-  //   quote.id = quoteLength+1
-  //   quote.name = quote
-  //   quote.description = quote
-  //   quote.submittedBy = quote
-  //   quote.completeDate = new Date(quote.completeDate)
-  //   this.quotes.push(quote)
-  // }
+  public show:boolean = false;
+  public details: any = 'Show';
+
+  deleteQuote(isComplete, index){
+    if (isComplete){
+      let toDelete = confirm(`Are you sure you want to delete the  Quote?`)
+
+      if(toDelete){
+        this.quotes.splice(index,1)
+      }
+     
+    }
+  }
+
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1
+    quote.name = quote
+    quote.description = quote
+    quote.submittedBy = quote
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
 
   
 
-  addNewQuote(quote){
-let quoteLength = this.quotes.length;
-quote.description = quoteLength+1;
-quote.completeDate = new Date(quote.completeDate)
-  this.quotes.push(quote)
-}
+//   addNewQuote(quote){
+// let quoteLength = this.quotes.length;
+// quote.description = quoteLength+1;
+// quote.completeDate = new Date(quote.completeDate)
+//   this.quotes.push(quote)
+// }
 
   
 

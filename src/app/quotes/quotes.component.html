@@ -7,7 +7,7 @@
             <div class="col-md-6">
                 <h2>Your quotes</h2>
                 <ul>
-                    <div class="card card-body" *ngFor='let quote of quotes' let i=index; let j=i ndex>
+                    <div class="card card-body" *ngFor="let quote of quotes ; let i=index">
                         <p></p><br>
                         <p> {{quote.name}}.</p>
                         <p>--{{ quote.description}}</p>
@@ -17,7 +17,9 @@
                             <app-quote-details *ngIf="show" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
                         </div>
                         <div>
+
                             <button (click)="toggle()" id="btn">{{ details }}</button>
+
                         </div>
                     </div>
                 </ul>
