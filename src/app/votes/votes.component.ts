@@ -14,11 +14,11 @@ export class VotesComponent implements OnInit {
   dvote = 0;
 
   upVote(){
-    this.uvote = this.uvote +1
+    this.uvote = this.uvote +1;
   }
 
   downVote(){
-    this.dvote = this.dvote+1
+    this.dvote = this.dvote +1;
   }
 
   constructor() { }
