@@ -1,5 +1,7 @@
+import { VotesComponent } from './../votes/votes.component';
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Quotes } from '../quotes'
+
 
 @Component({
   selector: 'app-quote-details',
@@ -8,6 +10,8 @@ import { Quotes } from '../quotes'
 })
 export class QuoteDetailsComponent implements OnInit {
 
+
+  @Input()uvote : VotesComponent;
   @Input() quote:Quotes;
   
   @Output() isComplete = new EventEmitter<boolean>();
